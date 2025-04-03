@@ -13,9 +13,9 @@ let getComputerChoice = () => {
 
 let getHumanChoice = () => {
     let choice = prompt("Choose: Rock, Paper, Scizzors?");
-    if("Rock"){
+    if(choice === "Rock"){
         return "Rock";
-    }else if("Paper"){
+    }else if(choice === "Paper"){
         return "Paper";
     }else{
         return "Scizzors";
