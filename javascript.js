@@ -13,7 +13,7 @@ let getComputerChoice = () => {
     
 }
 
-getComputerChoice();
+
 
 
 let getHumanChoice = () => {
@@ -28,7 +28,7 @@ let getHumanChoice = () => {
 }
 
 let playround = (humanChoice, computerChoice) => {
-    humanChoice = humanChoice[0].toUpperCase() + humanChoice.slice(1).toLowerCase();
+
     if(humanChoice === "Rock" && computerChoice === "Paper"){
         console.log("You lose! Paper beats Rock");
         computerScore++;
@@ -47,26 +47,26 @@ let playround = (humanChoice, computerChoice) => {
 }else if(computerChoice === "Scizzors" && humanChoice === "Rock"){
     console.log("You win! Rock beats Scizzors");
     humanScore++;
+
 }
 }
 
 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerchoice();
-
-playround(humanSelection,computerSelection);
-
+console.log("Round 1: ");
+playround(getHumanChoice(), getComputerChoice());
+console.log("Round 2: ");
+playround(getHumanChoice(), getComputerChoice());
+console.log("Round 3: ");
+playround(getHumanChoice(), getComputerChoice());
+console.log("Round 4: ");
+playround(getHumanChoice(), getComputerChoice());
+console.log("Round 5: ");
+playround(getHumanChoice(), getComputerChoice());
 
 let playGame = (hscore, cscore) => {
-    playround();
-    playround();
-    playround();
-    playround();
-    playround();
 
-    hscore = humanScore;
-    cscore = computerScore;
+    
 
     if(hscore>cscore){
         console.log("congrats player you win!");
@@ -77,3 +77,8 @@ let playGame = (hscore, cscore) => {
     }
     
 }
+
+
+
+
+playGame(humanScore, computerScore);
